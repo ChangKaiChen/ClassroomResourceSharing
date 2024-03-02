@@ -8,7 +8,7 @@ class User(UserMixin):
 
 
 login_manager = LoginManager()
-login_manager.login_view = 'user.login'  # TODO 重定向到登录页面
+login_manager.login_view = 'users.login'  # TODO 重定向到登录页面
 
 
 @login_manager.user_loader
