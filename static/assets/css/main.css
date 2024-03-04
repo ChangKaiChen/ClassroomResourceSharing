@@ -5919,7 +5919,6 @@ ul.custom-flex {
     justify-content: start;
 }
 
-/* 单选按钮与标签容器的样式 */
 .login .form-head form .radio-group-item {
     display: flex;
     align-items: center;
@@ -5940,8 +5939,8 @@ ul.custom-flex {
     background-color: #fff;
     border: 2px solid #d1d3d4;
     border-radius: 50%;
-    width: 28px; /* 宽度和高度相等 */
-    height: 28px; /* 宽度和高度相等 */
+    width: 28px;
+    height: 28px;
     margin-right: 8px;
     cursor: pointer;
     display: inline-block;

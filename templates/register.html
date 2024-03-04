@@ -2,80 +2,158 @@
 <html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>注册</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.svg" />
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.svg"/>
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Web Font -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
 
     <!-- ========================= CSS here ========================= -->
-    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/static/assets/css/LineIcons.2.0.css" />
-    <link rel="stylesheet" href="/static/assets/css/animate.css" />
-    <link rel="stylesheet" href="/static/assets/css/tiny-slider.css" />
-    <link rel="stylesheet" href="/static/assets/css/glightbox.min.css" />
-    <link rel="stylesheet" href="/static/assets/css/main.css" />
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/assets/css/LineIcons.2.0.css"/>
+    <link rel="stylesheet" href="/static/assets/css/animate.css"/>
+    <link rel="stylesheet" href="/static/assets/css/tiny-slider.css"/>
+    <link rel="stylesheet" href="/static/assets/css/glightbox.min.css"/>
+    <link rel="stylesheet" href="/static/assets/css/main.css"/>
 
 </head>
+<style>
+    .modal-content {
+        background-color: grey;
+        color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: none;
+        width: 30%;
+        text-align: center;
+    }
 
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: transparent;
+    }
+
+</style>
 <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
+<!--[if lte IE 9]>
+<p class="browserupgrade">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+    your experience and security.
+</p>
+<![endif]-->
 
-    <!-- start Registration section -->
-    <section class="login section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
-                    <div class="form-head">
-                        <h4 class="title">注册</h4>
-                        <form action="/register" method="post">
-                            <div class="form-group">
-                                <label>邮箱</label>
-                                <input class="margin-5px-bottom" type="email" id="exampleInputEmail1"  placeholder="Email">
+<!-- start Registration section -->
+<section class="login section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                <div class="form-head">
+                    <h4 class="title">注册</h4>
+                    <form action="/register" method="post">
+                        <div class="form-group">
+                            <label>邮箱</label>
+                            <input class="margin-5px-bottom" type="email" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label>用户名</label>
+                            <input class="margin-5px-bottom" type="text" id="Username1" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label>密码</label>
+                            <input class="margin-5px-bottom" type="password" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="verificationCode">验证码</label>
+                            <div style="display: flex; align-items: center;">
+                                <input type="text" class="form-control" id="verificationCode" placeholder="请输入验证码"
+                                       style="flex-grow: 1; margin-right: 10px;">
+                                <button style="width: 30%;height: 56px;white-space: nowrap;" type="button"
+                                        class="btn btn-primary" onclick="sendVerificationCode()">
+                                    发送验证码
+                                </button>
                             </div>
-                            <div class="form-group">
-                                <label>名字</label>
-                                <input class="margin-5px-bottom" type="text" id="exampleInputName1"  placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <label>用户名</label>
-                                <input class="margin-5px-bottom" type="text" id="Username1" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <label>密码</label>
-                                <input class="margin-5px-bottom" type="password" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="button">
-                                <button type="submit" class="btn">注册</button>
-                            </div>
-                            <p class="outer-link">已有账户? <a href="/login">登录</a></p>
-                        </form>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">您是</label>
+                            <select class="form-control" id="userType">
+                                <option value="student">学生</option>
+                                <option value="teacher">老师</option>
+                            </select>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn">注册</button>
+                        </div>
+                        <p class="outer-link">已有账户? <a href="/login">登录</a></p>
+                    </form>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <p style="font-size: 20px; color: #FF79C6">验证码已发送</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End Registration section -->
+    </div>
+</section>
+<!-- End Registration section -->
 
-    <!-- ========================= JS here ========================= -->
-    <script src="/static/assets/js/bootstrap.min.js"></script>
-    <script src="/static/assets/js/count-up.min.js"></script>
-    <script src="/static/assets/js/wow.min.js"></script>
-    <script src="/static/assets/js/tiny-slider.js"></script>
-    <script src="/static/assets/js/glightbox.min.js"></script>
-    <script src="/static/assets/js/main.js"></script>
+<!-- ========================= JS here ========================= -->
+<script src="/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/assets/js/count-up.min.js"></script>
+<script src="/static/assets/js/wow.min.js"></script>
+<script src="/static/assets/js/tiny-slider.js"></script>
+<script src="/static/assets/js/glightbox.min.js"></script>
+<script src="/static/assets/js/main.js"></script>
 </body>
+<script>
+    var isCodeSent = false;
+
+    function sendVerificationCode() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+        setTimeout(function () {
+            modal.style.display = "none";
+        }, 1500);
+        isCodeSent = true;
+        // 禁用发送按钮并开始倒计时
+        const button = document.querySelector("button.btn-primary");
+        button.disabled = true;
+        let countdown = 60;
+        // 每秒更新按钮上的文字
+        const intervalId = setInterval(() => {
+            if (countdown > 0) {
+                button.textContent = `${countdown}s后重新发送`;
+                countdown -= 1;
+            } else {
+                clearInterval(intervalId);
+                button.textContent = "重新发送";
+                button.disabled = false; // 倒计时结束后重新启用按钮
+            }
+        }, 1000);
+    }
+
+    document.querySelector("form").addEventListener("submit", function (event) {
+        if (!isCodeSent) {
+            alert("请发送验证码");
+            event.preventDefault(); // 阻止表单提交
+        }
+    });
+
+</script>
 </html>
