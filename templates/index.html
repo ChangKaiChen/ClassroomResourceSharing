@@ -22,9 +22,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}"/>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/kanxue.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-bbs.css') }}"/>
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_card.scss') }}"/>-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_reboot.scss') }}"/>-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_root.scss') }}"/>-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_type.scss') }}"/>-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_bootstrap_icon.scss') }}"/>-->
 </head>
+<style>
 
+</style>
 <body>
 <!--[if lte IE 9]>
 <p class="browserupgrade">
@@ -42,7 +50,7 @@
             <div class="col-lg-12">
                 <div class="nav-inner">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/index">
                             <img src="/static/assets/images/logo/logo.svg" alt="Logo">
                         </a>
                         <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
@@ -53,76 +61,35 @@
                             <span class="toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                            <ul id="nav" class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="page-scroll active dd-menu collapsed" href="javascript:void(0)"
-                                       data-bs-toggle="collapse" data-bs-target="#submenu-1-1"
-                                       aria-controls="navbarSupportedContent" aria-expanded="false"
-                                       aria-label="Toggle navigation">Home</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-1">
-                                        <li class="nav-item active"><a href="index.html">University</a></li>
-                                        <li class="nav-item"><a href="index2.html">Online Course</a></li>
-                                        <li class="nav-item"><a href="index3.html">Training Institute</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
-                                       data-bs-toggle="collapse" data-bs-target="#submenu-1-2"
-                                       aria-controls="navbarSupportedContent" aria-expanded="false"
-                                       aria-label="Toggle navigation">Courses</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-2">
-                                        <li class="nav-item"><a href="courses-grid.html">Courses Grid</a></li>
-                                        <li class="nav-item"><a href="course-details.html">Course Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
-                                       data-bs-toggle="collapse" data-bs-target="#submenu-1-3"
-                                       aria-controls="navbarSupportedContent" aria-expanded="false"
-                                       aria-label="Toggle navigation">Events</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-3">
-                                        <li class="nav-item"><a href="events-grid.html">Events Grid</a></li>
-                                        <li class="nav-item"><a href="event-details.html">Event Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
-                                       data-bs-toggle="collapse" data-bs-target="#submenu-1-4"
-                                       aria-controls="navbarSupportedContent" aria-expanded="false"
-                                       aria-label="Toggle navigation">Pages</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-4">
-                                        <li class="nav-item"><a href="about-us.html">About Us</a></li>
-                                        <li class="nav-item"><a href="teachers.html">Teachers</a></li>
-                                        <li class="nav-item"><a href="teacher-details.html">Teacher Details</a></li>
-                                        <li class="nav-item"><a href="our-gallery.html">Our Gallery</a></li>
-                                        <li class="nav-item"><a href="faq.html">FAQ</a></li>
-                                        <li class="nav-item"><a href="login.html">Login</a></li>
-                                        <li class="nav-item"><a href="registration.html">Register</a></li>
-                                        <li class="nav-item"><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li class="nav-item"><a href="404.html">404 Error</a></li>
-                                        <li class="nav-item"><a href="mail-success.html">Mail Success</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
-                                       data-bs-toggle="collapse" data-bs-target="#submenu-1-5"
-                                       aria-controls="navbarSupportedContent" aria-expanded="false"
-                                       aria-label="Toggle navigation">Blog</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-5">
-                                        <li class="nav-item"><a href="blog-grid-sidebar.html">Blog Grid Sidebar</a></li>
-                                        <li class="nav-item"><a href="blog-single.html">Blog Single</a></li>
-                                        <li class="nav-item"><a href="blog-single-sidebar.html">Blog Single Sibebar</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="contact.html">Contact</a></li>
-                            </ul>
                             <form class="d-flex search-form">
                                 <input class="form-control me-2" type="search" placeholder="Search"
                                        aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><i
                                         class="lni lni-search-alt"></i></button>
                             </form>
+                            <ul id="nav" class="navbar-nav ms-auto">
+                                <li class="nav-item nav-profile dropdown">
+                                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="nav-profile-img">
+                                            <img style="width: 50px;height: 50px;border-radius: 50%;margin-right: 10px;"
+                                                 src="/static/assets/images/team/teacher-details.jpg" alt="image">
+                                            <span class="availability-status online"></span>
+                                        </div>
+                                        <div class="nav-profile-text">
+                                            <p class="mb-1 text-black">执棋者</p>
+                                        </div>
+                                    </a>
+                                    <div style="align-items: center" class="dropdown-menu"
+                                         aria-labelledby="profileDropdown">
+                                        <a style="padding: 2px;" class="dropdown-item" href="#">
+                                            <i style="margin-left: 10%" class="lni lni-cog"></i>个人中心</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a style="padding: 2px;" class="dropdown-item" href="#">
+                                            <i style="margin-left: 10%" class="lni lni-exit"></i>退出登录</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div> <!-- navbar collapse -->
                     </nav> <!-- navbar -->
                 </div>
@@ -131,7 +98,527 @@
     </div> <!-- container -->
 </header>
 <!-- End Header Area -->
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs pull-xs-left">
+                <li class="nav-item">
+                    <span class="nav-link">最新资料</span>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover threadlist">
+                <tbody>
+                <tr class="thread " data-tid="280762">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280762.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
 
+
+                            <a href="thread-280762.htm">[原创] 关于函数调用链路trace的效果展示【仅供学习参考】</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-166.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">iOS安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-940416.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">ttxx</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・21小时前</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280754">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280754.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280754.htm">[原创]绕过爱奇艺新版libmsaoaidsec.so Frida检测</a>
+
+
+                            <i class="icon-paperclip text-grey"></i>
+
+
+                            <a href="forum-161.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">Android安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-956681.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">yyy123</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・1天前</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280749">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280749.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280749.htm">[原创]DFA还原白盒AES密钥</a>
+
+
+                            <a href="forum-161.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">Android安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-983110.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">杨如画</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2天前</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280722">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280722.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280722.htm">DEFCON-2023-Quals Blackbox 好玩的黑盒虚拟机代码执行</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-37.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">CTF对抗</a>
+
+
+                        </div>
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-907036.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">wx_御史神风</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・4天前</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280661">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280661.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280661.htm">[原创]Dobby框架源码学习</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-161.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">Android安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-886627.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">tcc0lin</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-25 23:05</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread top_3" data-tid="280627">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280627.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <i class="icon-top-3"></i>
+
+
+                            <a href="thread-280627.htm">[礼物]岁月沉淀二十四载，2024元宵大礼包，《看雪论坛精华24期》发布！</a>
+
+
+                            <i class="icon-paperclip text-grey"></i>
+
+
+                            <span>
+						</span>
+                            <a href="forum-45.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">茶余饭后</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-93.htm" style="color: #999999;" class="username hidden-sm hidden-md">kanxue</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-23 14:44</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280605">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280605.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280605.htm">[原创]初次漏洞分析--winrar(CVE-2023-38831)漏洞原理</a>
+
+
+                            <a href="forum-150.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">二进制漏洞</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-967913.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">time.time</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-21 17:57</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280604">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280604.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280604.htm">CVE-2021-32760漏洞分析与复现</a>
+
+
+                            <a href="forum-150.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">二进制漏洞</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-765771.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">wx_游由</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-21 17:29</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280603">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280603.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280603.htm">2023年工业控制网络安全态势白皮书</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-45.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">茶余饭后</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-947523.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">ditecting</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-21 17:01</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280600">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280600.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280600.htm">[原创]记一次某汽车app白盒aes还原过程</a>
+
+
+                            <a href="forum-161.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">Android安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-949812.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">劫__</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-21 16:22</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280593">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280593.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280593.htm">[原创]CS 4.4 二开笔记：beacon 指令分析篇</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-4.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">软件逆向</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-951654.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">bwner</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-21 10:24</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280562">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280562.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280562.htm">[原创]Directory Opus 13.2 逆向分析</a>
+
+
+                            <a href="thread-280562-2.htm" title="最后一页">
+                                <span class="icon-copy"
+                                      style="font-size: 12px; color: #999; margin-left: 4px;"></span><span
+                                    style="font-size: 12px; margin-left: 2px; color: #999;">2</span>
+                            </a>
+
+                            <a href="forum-4.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">软件逆向</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-947361.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">Sw1ndler</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-18 20:10</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280556">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280556.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280556.htm">分析：香港2亿港元诈骗案的风险及技术检测思路</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-162.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">企业安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-950953.htm" style="color: #999999;" class="username ">顶象技术</a>
+                                <span class="date " style="color: #999999;">・2024-2-18 16:05</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280542">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280542.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280542.htm">[翻译]使用 Malcat 编写 Qakbot 5.0 配置提取器</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-4.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">软件逆向</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-767964.htm" style="color: #999999;" class="username ">梦幻的彼岸</a>
+                                <span class="date " style="color: #999999;">・2024-2-17 16:46</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280501">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280501.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280501.htm">[原创]对某旅行APP的检测以及参数计算分析【新手向-Simplesign篇】（二）</a>
+
+
+                            <a href="forum-161.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">Android安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-839701.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">我是红领巾</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-11 20:40</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280500">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280500.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280500.htm">[原创]安卓真机无root环境下的单机游戏修改-IL2CPP</a>
+
+
+                            <a href="forum-161.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">Android安全</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-958990.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">TubituX</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-11 17:54</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280491">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280491.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280491.htm">SVK1.3x脱壳笔记</a>
+
+
+                            <span>
+						</span>
+                            <a href="forum-88.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">加壳脱壳</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-993047.htm" style="color: #999999;" class="username ">Tony2024</a>
+                                <span class="date " style="color: #999999;">・2024-2-9 13:39</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="thread " data-tid="280488">
+                    <td class="td-subject px-3">
+                        <div class="subject" style="margin-bottom: 0.5rem;">
+                            <a href="thread-280488.htm" target="_blank" title="新窗口打开">
+                                <span class="icon-xiuno icon-post-grey"></span>
+                            </a>
+
+
+                            <a href="thread-280488.htm">bugku CTF 安卓逆向题目First_Mobile(xman)</a>
+
+
+                            <i class="icon-paperclip text-grey"></i>
+
+
+                            <span>
+										</span>
+                            <a href="forum-37.htm" class="small hidden-sm hidden-md float-right"
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">CTF对抗</a>
+
+
+                        </div>
+
+                        <div class="row small mx-0 mb-2">
+                            <div class="col px-0">
+                                <a href="user-home-396123.htm" style="color: #999999;"
+                                   class="username hidden-sm hidden-md">zhenwo</a>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・2024-2-8 21:28</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="load-more-wrap">
+                <div class="btn-load-more j-load-more" data-exclude="103,134,125">点击查看更多</div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- ========================= scroll-top ========================= -->
 <a href="#" class="scroll-top btn-hover">
     <i class="lni lni-chevron-up"></i>

@@ -1439,7 +1439,7 @@ ol {
 
 /* Topbar */
 .header .toolbar-area {
-    padding: 12px 0;
+    padding: 10px 0;
     background: #0EDC8D;
 }
 
@@ -1653,7 +1653,7 @@ ol {
 }
 
 .navbar-nav .nav-item:hover a {
-    color: #0EDC8D;
+    /*color: #0EDC8D;*/
 }
 
 .navbar-nav .nav-item a {
@@ -1662,7 +1662,7 @@ ol {
     -webkit-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
     position: relative;
-    padding: 35px 0;
+    padding: 20px 0;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -1677,30 +1677,30 @@ ol {
     text-transform: capitalize;
 }
 
-.navbar-nav .nav-item a::after {
-    opacity: 0;
-    visibility: hidden;
-}
+/*.navbar-nav .nav-item a::after {*/
+/*    opacity: 0;*/
+/*    visibility: hidden;*/
+/*}*/
 
-.navbar-nav .nav-item a::before {
-    content: '';
-    position: absolute;
-    top: -7px;
-    z-index: -1;
-    opacity: 0;
-    border-radius: 10px;
-    -webkit-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
-    z-index: 5;
-    border: 8px solid #0EDC8D;
-    border-radius: 0;
-    border-bottom-color: transparent !important;
-    width: auto !important;
-    left: 50% !important;
-    margin-left: -8px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
+/*.navbar-nav .nav-item a::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: -7px;*/
+/*    z-index: -1;*/
+/*    opacity: 0;*/
+/*    border-radius: 10px;*/
+/*    -webkit-transition: all 0.3s ease-out 0s;*/
+/*    transition: all 0.3s ease-out 0s;*/
+/*    z-index: 5;*/
+/*    border: 8px solid #0EDC8D;*/
+/*    border-radius: 0;*/
+/*    border-bottom-color: transparent !important;*/
+/*    width: auto !important;*/
+/*    left: 50% !important;*/
+/*    margin-left: -8px;*/
+/*    -webkit-transition: all 0.3s ease;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
 
 .navbar-nav .nav-item a.active:before {
     opacity: 1;
@@ -1944,7 +1944,7 @@ ol {
 
 .header .search-form .form-control {
     display: block;
-    width: 175px;
+    width: 725px;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 500;
@@ -2009,6 +2009,42 @@ ol {
 /*======================================
     Hero Area CSS
 ========================================*/
+.load-more-wrap {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0 !important
+}
+
+.btn-load-more {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 20%;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    white-space: nowrap;
+    padding: 9px 20px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color 0.3s; /* 添加过渡效果让颜色变化更平滑 */
+}
+
+.btn-load-more:hover {
+    background-color: red;
+    color: #fff;
+}
+
 .hero-area {
     position: relative;
     background-color: #F4F7FA;
