@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+{% block content %}
+<ol class="breadcrumb mb-3">
+
+</ol>
+<div class="row mx-0">
+    <div class="col-12 col-md-9 px-0">
+        <div class="left_content">
+            <div class="card message_card">
+                <div class="mb-0">
+                    <div class="card-body">
+                        <div class="d-none d-lg-block">
+                            <dl class="row">
+                                <dd class="vtop">
+                                    <dl class="row small" style="height: 34px; line-height: 34px;">
+                                        <dt style="padding: 0px;">
+
+                                            <div class="break-all m-0">
+                                                <span style="font-size: 1.4rem;">{{ title }}</span>
+                                            </div>
+
+                                        </dt>
+
+                                    </dl>
+                                    <dl class="row small mt-1">
+                                        <dt style="padding: 0px;">
+                                            <div>
+												<span class="date text-grey ml-1"><i class="icon-clock-o"
+                                                                                     aria-hidden="true"></i>
+													{{ time }}</span>
+                                            </div>
+                                        </dt>
+                                        <dd class="text-right">
+
+
+                                        </dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- choadi 手机端适配 开始-->
+                        <div class="px-3 pt-3 d-block d-lg-none">
+
+                            <h3 class="break-all subject m-0">
+                                [原创]Frida-Hook-Java层操作大全
+
+                                <i class="icon-digest-2" aria-hidden="true" title="优秀"></i>
+                            </h3>
+
+                            <div class="row mx-0 mt-2">
+                                <div class="col-8 px-0">
+                                    <a href="user-home-979679.htm" style="text-decoration: none;" aria-hidden="true"
+                                       tabindex="-1">
+                                        <img style="width: 2rem; height: 2rem; border-radius: 6rem;"
+                                             src="//passport.kanxue.com/upload/avatar/679/979679.png?1693204967">
+                                    </a>
+
+                                    <a class="small" href="user-home-979679.htm" style="text-decoration: none;">Shangwendada</a>
+                                    <img class="huoyue_num" src="/view/img/rank/2.png" width="22" alt="活跃值">
+                                </div>
+                                <div class="col px-0 text-right">
+
+
+                                </div>
+                                <!-- <img style="" src="//bbs.kanxue.com/view/img/stars01.gif" alt="">  -->
+
+
+                            </div>
+                            <div class="small row mx-0 mt-2">
+                                <div class="col px-0">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-group_102"></use>
+                                    </svg>
+                                    <span class="post_online_time" style="vertical-align: text-bottom;"
+                                          data-online_time="39888" data-desc="11 小时，  1 级"
+                                          onmouseenter="show_online_level(event)"><img
+                                            src="//passport.kanxue.com/pc/view/img/star.gif" width="13" height="13"
+                                            style="opacity: 0.65; margin-right: 2px;"></span>
+                                </div>
+                                <div class="col px-0 text-right">
+
+
+                                </div>
+                            </div>
+                            <div class="small row mx-0 mt-2">
+                                <div class="col px-0"><span class="date text-grey">2天前</span></div>
+                                <div class="col px-0 text-right"><span class="text-grey hidden-md-down"><i
+                                        class="icon-eye" aria-hidden="true"></i> 1566</span></div>
+                            </div>
+
+                        </div>
+                        <!-- choadi 手机端适配 结束-->
+                        <hr aria-hidden="true">
+                        <div class="message" isfirst="1">
+                            {{ content|safe }}
+                        </div>
+                        <div>
+                        </div>
+                        <div style="height: 33px; line-height: 33px; border-top: 1px solid #ddd;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 pr-0 hidden-sm hidden-md" style="padding-left: 15px;">
+        <div class="right_content positionSticky position-sticky" style="top:0;">
+            <div class="rightbox_card_hidden" style="">
+                <div class="card mb-3 position-relative ">
+                    <div class="py-4 px-4">
+                        <div class="row mx-0">
+                            <div class="d-inline-block position-relative avatar_box" data-uid="979679"
+                                 aria-hidden="true" tabindex="-1">
+                                <img src="{{ image }}"
+                                     style="width: 5rem; height:  5rem; border-radius: 5rem;">
+                                <span style="font-size: 16px;margin-left: 2rem" class="font-weight-bold">
+										<span class="username_box" data-uid="979679">{{ author }}</span>
+									</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pb-3" style="color: #bbbbbb;">
+                <div class="py-2 px-3 mb-2" style="color: #333333;border-bottom: 1px solid #eeeeee;">
+                    他的文章
+                </div>
+                <div class="px-3">
+                    {% for link in links %}
+                    <div class="mb-2">
+                        <a href="/resources/{{ link.id }}"
+                           style="color: #7d7d7d; font-size: 13px;">{{ link. title }}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -95,24 +96,8 @@
 </header>
 <!-- End Header Area -->
 <div class="container">
-<div class="card">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs pull-xs-left">
-                <li class="nav-item">
-                    <span class="nav-link">最新资料</span>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <table class="table table-hover threadlist" id="data-list">
-                <tbody>
-                </tbody>
-            </table>
-            <div class="load-more-wrap">
-                <div class="btn-load-more j-load-more" data-exclude="103,134,125">点击查看更多</div>
-            </div>
-        </div>
-    </div>
+{% block content %}
+{% endblock content %}
 </div>
 <!-- ========================= scroll-top ========================= -->
 <a href="#" class="scroll-top btn-hover">
@@ -207,50 +192,4 @@
     });
 </script>
 </body>
-<script>
-    $(function () {
-        var page = 1;
-        function get_info() {
-            $.ajax({
-                url: '/resources',
-                data: JSON.stringify({page: page, limit: 10}),
-                type: 'POST',
-                contentType: 'application/json',
-                success: function (response) {
-                    if (response.msg === 'success') {
-                        response.data.forEach(function (data) {
-                            $('#data-list > tbody').append(
-                                `<tr class="thread " data-tid="${data.id}">
-                    <td class="td-subject px-3">
-                        <div class="subject" style="margin-bottom: 0.5rem;">
-                            <a href="/resources/${data.id}" target="_blank" title="新窗口打开">
-                                <span class="icon-xiuno icon-post-grey"></span>
-                            </a>
-                            <a href="/resources/${data.id}">${data.title}</a>
-                            <a href="forum-166.htm" class="small hidden-sm hidden-md float-right"
-                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">${data.classification}</a>
-                        </div>
-                        <div class="row small mx-0 mb-2">
-                            <div class="col px-0">
-                                <a href="/teachers/home/${data.author}" style="color: #999999;"
-                                   class="username hidden-sm hidden-md">${data.author}</a>
-                                <span class="date hidden-sm hidden-md" style="color: #999999;">・${data.time}</span>
-                            </div>
-                        </div>
-                    </td>
-                </tr>`
-                            );
-                        })
-                    }
-                    ;
-                    page = page + 1;
-                }
-            });
-        }
-        get_info();
-        $('.btn-load-more').on('click', function () {
-            get_info();
-        });
-    });
-</script>
 </html>
