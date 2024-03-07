@@ -10,7 +10,7 @@ app = create_app()
 @app.route('/index')
 @login_required
 def index():
-    return render_template('index.html')
+    return render_template('student-center.html')
 
 
 if __name__ == '__main__':
