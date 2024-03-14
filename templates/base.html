@@ -29,6 +29,8 @@
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_root.scss') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_type.scss') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_bootstrap_icon.scss') }}"/>-->
+    {% block styles %}
+    {% endblock styles %}
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -112,6 +114,8 @@
 <script src="/static/assets/js/glightbox.min.js"></script>
 <script src="/static/assets/js/main.js"></script>
 <script src="/static/assets/js/jquery.min.js"></script>
+{% block scripts %}
+{% endblock scripts %}
 <script type="text/javascript">
     //========= Hero Slider
     tns({
