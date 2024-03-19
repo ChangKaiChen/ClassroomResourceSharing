@@ -6,4 +6,4 @@ from flask_login import login_required
 @teacher_bp.route('/editor', methods=['POST', 'GET'])
 @login_required
 def editor():
-    return render_template('editor.html', title='添加新文件')
+    return render_template('teachers/editor.html', title='编辑文件')

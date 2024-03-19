@@ -6,6 +6,7 @@ import settings
 from blueprints.students import student_bp
 from blueprints.teachers import teacher_bp
 from blueprints.resources import resource_bp
+from blueprints.courses import course_bp
 from blueprints.users import user_bp
 from extensions import login_manager
 
@@ -20,6 +21,7 @@ def create_app():
     app.register_blueprint(student_bp)
     app.register_blueprint(teacher_bp)
     app.register_blueprint(resource_bp)
+    app.register_blueprint(course_bp)
     app.secret_key = urandom(66)
     # TODO 初始化配置
     login_manager.init_app(app)

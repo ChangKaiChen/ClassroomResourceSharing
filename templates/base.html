@@ -16,21 +16,24 @@
             rel="stylesheet">
 
     <!-- ========================= CSS here ========================= -->
+    {% block styles %}
+    {% endblock styles %}
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/LineIcons.2.0.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/kanxue.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-bbs.css') }}"/>
+    {% block styles2 %}
+    {% endblock styles2 %}
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/kanxue.css') }}"/>-->
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-bbs.css') }}"/>-->
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_card.scss') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_reboot.scss') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_root.scss') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_type.scss') }}"/>-->
     <!--    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/_bootstrap_icon.scss') }}"/>-->
-    {% block styles %}
-    {% endblock styles %}
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -67,6 +70,33 @@
                                         class="lni lni-search-alt"></i></button>
                             </form>
                             <ul id="nav" class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed{{ ' active' if request.path == '/index' else '' }}" href="/index" >首页</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll dd-menu collapsed{{ ' active' if request.path == '/course-objective' or request.path == '/teaching-programme' }}" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">课程介绍</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-2">
+                                        <li class="nav-item"><a href="/course-objective">课程目标</a></li>
+                                        <li class="nav-item"><a href="/teaching-programme">教学大纲</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">教学课件</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-3">
+                                        <li class="nav-item"><a href="events-grid.html">1-第一章</a></li>
+                                        <li class="nav-item"><a href="event-details.html">2-第二章</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">参考书籍</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-4">
+                                        <li class="nav-item"><a href="about-us.html">计算机网络基础</a></li>
+                                        <li class="nav-item"><a href="teachers.html">计算机操作系统</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed{{ ' active' if request.path == '/resources' else '' }}" href="/resources">资源列表</a>
+                                </li>
                                 <li class="nav-item nav-profile dropdown">
                                     <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
                                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -97,7 +127,7 @@
     </div> <!-- container -->
 </header>
 <!-- End Header Area -->
-<div class="container">
+<div class="container" style="height: 100%;">
 {% block content %}
 {% endblock content %}
 </div>

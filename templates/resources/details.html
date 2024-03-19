@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}{{ title }}{% endblock title %}
+{% block styles2 %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/kanxue.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-bbs.css') }}"/>
+{% endblock styles2 %}
 {% block content %}
 <ol class="breadcrumb mb-3">
 

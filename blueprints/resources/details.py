@@ -42,4 +42,4 @@ def details(id):
                 "title": "[原创]Dobby框架源码学习",
                 "classification": "Android安全"
             }]
-    return render_template('details.html', title='2024年3月7日早报', image='/static/assets/images/testimonials/testi-1.jpg', time='2024-3-7 09:00', author='cck', content=content, links=links, download_url='/download/test.rar')
+    return render_template('resources/details.html', title='2024年3月7日早报', image='/static/assets/images/testimonials/testi-1.jpg', time='2024-3-7 09:00', author='cck', content=content, links=links, download_url='/download/test.rar')
