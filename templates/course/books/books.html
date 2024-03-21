@@ -12,12 +12,12 @@
             </div>
             <div class="left">
                 <div class="sub-menus">
-                    <h2 style="background: #3362A8;color:white">教学课件</h2>
+                    <h2 style="background: #3362A8;color:white">参考书籍</h2>
                     <ul>
-                        {% for chapter in chapters %}
-                        <li class="{{ 'current' if chapter.id == current else '' }}" style="background: {{ '#3362A8' if chapter.id == current else 'initial' }}">
-                            <a href="/teaching?chapter={{ chapter.id }}"
-                               style="color: {{ 'white' if chapter.id == current else 'initial'}}">{{ chapter.id }}-{{ chapter.title }}</a>
+                        {% for book in books %}
+                        <li class="{{ 'current' if book.id == current else '' }}" style="background: {{ '#3362A8' if book.id == current else 'initial' }}">
+                            <a href="/books?book={{ book.id }}"
+                               style="color: {{ 'white' if book.id == current else 'initial'}}">{{ book.id }}-{{ book.title }}</a>
                         </li>
                         {% endfor %}
                     </ul>

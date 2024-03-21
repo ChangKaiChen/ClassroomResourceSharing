@@ -5,7 +5,7 @@ from flask import request, render_template, jsonify
 @user_bp.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
-        return render_template('register.html')
+        return render_template('users/register.html')
     else:
         try:
             return jsonify({'success': True, 'message': '注册成功'}), 200, {'ContentType': 'application/json'}

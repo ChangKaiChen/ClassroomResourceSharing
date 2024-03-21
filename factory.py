@@ -3,8 +3,6 @@ from sqlalchemy import text
 from os import urandom
 from extensions import db
 import settings
-from blueprints.students import student_bp
-from blueprints.teachers import teacher_bp
 from blueprints.resources import resource_bp
 from blueprints.courses import course_bp
 from blueprints.users import user_bp
@@ -18,8 +16,6 @@ def create_app():
     app.config.from_object(settings.DevelopmentConfig)
     # TODO 注册蓝本
     app.register_blueprint(user_bp)
-    app.register_blueprint(student_bp)
-    app.register_blueprint(teacher_bp)
     app.register_blueprint(resource_bp)
     app.register_blueprint(course_bp)
     app.secret_key = urandom(66)

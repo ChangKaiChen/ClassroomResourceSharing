@@ -8,7 +8,7 @@ from extensions import User, db
 @user_bp.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
-        return render_template('login.html')
+        return render_template('users/login.html')
     else:
         user = User('cck')
         login_user(user)
