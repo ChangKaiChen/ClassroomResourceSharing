@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}"/>
+{% endblock styles %}
+{% block content %}
+<div class="about">
+    <div class="content">
+    <div class="common-container">
+        <div class="main" style="">
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span style="letter-spacing:1px">第一章：概论（Introduction）（3学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">本章教学目的是，要求学生理解机器学习中研究的问题，掌握机器学习的基本概念。并以决策树为实例讲解机器学习中的分类问题。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">主要内容包括机器学习的研究动机；机器学习是什么；机器学习应用实例；机器学习的基本概念及机器学习的研究历史等。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解2学时，研讨1学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）讲解内容：机器学习概况及课程教学安排（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">结合当今人工智能技术在国内外政府、学术界和产业界的发展背景，讲解机器学习的发展动机、初步认识，当今的经典应用案例，基本概念和研究历史等基本知识。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）研讨内容：机器学习方法对未来社会的影响（1学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">就机器学习学科研究进展对未来经济和社会的深刻影响进行研讨，激发对<span
+                    style="line-height:114%">于本课程的学习兴趣和主动学习动力。</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">以课后作业的形式，请学生进行课后延伸自学，并准备相应的简要文字或PPT材料。调研机器学习有哪些新用，已经或即将如何对国家重大需求、社会生产生活等方面产生何种影响，探讨作为双一流高校毕业生应当如何应对。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">研讨形式为<strong>择优上讲台</strong>，面对全班进行口头分享，展开讨论，控制在5人左右。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span style="letter-spacing:1px">第二章：模型评估与选择（1学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学目的是，要求学生理解机器学习模型的基本评估和选择方法。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">主要内容包括经验误差与过拟合、性能评估方法及评价指标。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">本章教学安排：</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><span style="line-height:114%">重点讲解学习器的实际预测输出与样本的真实输出之间存在的差异，学习器的性能评价指标，以及交叉验证法等学习器的性能评估方法。</span>其他内容相对简单易懂，要求学生自学。</span></span>
+            </p>
+            <p></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">第三章：线性模型（4学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">本章教学目的是，要求学生理解线性回归模型和多分类问题、LDA算法、类别不平衡问题。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">主要内容包括线性回归、对数几率回归、LDA方法等。</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解2学时，研讨2学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）讲解：线性回归和对数几率回归（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解线性回归的基本原理，并基于此引出对数几率回归方法及其应用场景。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）讲解：LDA方法（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解线性判别分析的基本原理，并留下多分类问题的思考。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（4）研讨：对数几率回归及多分类问题（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="font-size:11px">采用Python的Scikit</span> <span style="font-size:11px">Learn开源机器学习软件包，开展基于对数几率回归的广告点击率预测的项目实践。采用Docker技术，提供参考配置环境，学生专注于机器学习问题的应用和分析，研讨学习器参数对性能的影响，对数几率回归模型的特点及其适用场景，以及多分类学习、<span
+                    style="line-height:114%">类别不平衡问题如何处理。</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">研讨形式为<strong>无领导小组讨论</strong>，并选出代表对全班进行分享；展开整体讨论，进行总结。</span></span></span>
+            </p>
+            <p class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span style="letter-spacing:1px">第四章：决策树与随机森林（6学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">本章教学目的是，要求学生理解决策树算法，掌握决策树的属性划分方法，理解随机森林的基本原理和特性。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">教学内容包括决策树学习的基本算法、划分选择、剪枝处理、随机森林等。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解3学时，研讨3学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）讲解：决策树算法和属性划分方法（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解决策树算法的基本原理和基于信息增益的ID.3等属性划分方法。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）研讨：拟合性能与剪枝（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">要求学生进行课后延伸自学，了解决策树的过拟合、欠拟合特性，以及先剪枝、后剪枝等改进算法，并给出适用案例。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">研讨形式为<strong>择优上讲台</strong>，面对全班进行口头分享，展开讨论，控制在5人左右。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（3）讲解：随机森林基本原理（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="line-height:114%"><span
+                    style="font-size:11px">重点讲解基于决策树集成学习器——随机森林（Random</span></span> <span
+                    style="line-height:114%"><span
+                    style="font-size:11px">Forest）的基本原理，并讲解该算法在当今视觉感知等方面的最新应用。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（4）中期研讨：基于随机森林的目标分类应用（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="font-size:11px">基于理论学习，采用Python的Scikit</span> <span style="font-size:11px">Learn开源机器学习软件包进行手写数字识别，并结合分类性能进行研讨，分析算法模型中树数量等关键参数对分类性能的影响。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">研讨形式为<strong>无领导小组讨论</strong>，并选出代表对全班进行分享；展开整体讨论，进行总结。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">第五章：神经网络（6学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学目的是，要求学生理解神经网络的基本结构和BP算法原理。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">教学内容包括发展历史、感知机与多层网络、误差逆传播算法、其他网络形式。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解3学时，研讨3学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）研讨：神经网络的起源与发展历史（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">要求学生进行课前预习，通过教材和网络，了解人工神经网络的研究动机、基本思路和发展里程碑事件，以及当今研究主要进展。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">研讨形式为<strong>无领导小组讨论</strong>，并选出代表对全班进行分享；展开整体讨论，进行总结。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><strong>（2）讲解：</strong><span
+                    style="line-height:114%">感知机</span><strong>（1学时）</strong></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解人工神经网络的基本原理和感知机模型，神经元和激活函数等基本概念，引出网络训练问题。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><strong>（3）讲解：</strong><span
+                    style="line-height:114%">BP网络与其他网络</span><strong>（2学时）</strong></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">讲解BP网络的重要意义，重点讲解前馈神经网络训练的BP算法，分析其原理，演示训练过程，简要介绍反馈型、竞争型神经网络模型。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（4）研讨：基于BP网络的手写数字识别（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">基于理论知识学习，基于示例ANN源代码，进行手写数字识别，并结合随机森林分类器的分类性能进行研讨，分析神经元个数和网络结构、初始化参数等对分类性能的影响，探讨ANN网络设计的关键问题。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">研讨形式为<strong>择优上讲台</strong>，面对全班进行口头分享，展开讨论，控制在5人左右。</span></span></span>
+            </p>
+            <p></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span style="letter-spacing:1px">第六章：支持向量机（4学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学目的是，要求学生理解SVM算法原理，掌握SVM的设计方法。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">教学内容包括最优分类超平面、间隔与支持向量、软间隔与正则化及核方法等。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解2学时，研讨2学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）讲解： SVM算法原理（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><span style="line-height:114%">重点讲解</span>最优分类超平面、间隔与支持向量的基本原理和思路，引出非线性分类问题<span
+                    style="line-height:114%">，讲解</span>核方法的基本思路。</span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）研讨：SVM的优异特性分析（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="line-height:114%"><span style="font-size:11px">要求学生进行课后延伸自学，以作业形式开展基于SVM的手写数字识别实践，调整不同参数，形成不同结果，并与Random</span></span> <span
+                    style="line-height:114%"><span
+                    style="font-size:11px">Forest和ANN结果进行对比分析，形成分析报告。</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">基于以上实践结果，就SVM的特异性及其原因、适用场景进行研讨。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">研讨形式为<strong>择优上讲台</strong>，面对全班进行口头分享，展开讨论，控制在5人左右。</span></span></span>
+            </p>
+            <p class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span style="letter-spacing:1px">第七章：无监督（Unsupervised Machine Learning）（2学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><span style="line-height:114%">本章教学目的是</span>，要求学生理解无监督算法特点，掌握几种经典的无监督学习方法。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><span style="line-height:114%">教学内容包括无监督学习模式</span>，K-means算法、高斯混合模型（GMM）和EM算法原理。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解1学时，研讨1学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）研讨：无监督学习的研究动机和k-means算法（1学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">要求学生进行课前预习，通过教材和网络，了解无监督学习的研究动机、基本思路和发展里程碑事件，以及k-means算法。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">研讨形式为<strong>无领导小组讨论</strong>，并选出代表对全班进行分享；展开整体讨论，进行总结。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）讲解：高斯混合模型和EM算法（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解高斯混合模型的基本原理，介绍十大机器学习算法之一的EM算法，引出无监督学习与深度学习的关系。</span></span>
+            </p>
+            <p class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">第八章：深度学习（6学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><span style="line-height:114%">本章教学目的是</span>，要求学生理解深度学习的基本原理和几种经典深度网络模型，掌握几种深度神经网络模型的应用方法。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解3学时，研讨3学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）研讨：深度学习为何掀起研究热潮（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">要求学生进行课前预习，通过教材和网络，调研深度学习的研究动机、基本思路和发展里程碑事件，以及当今的标志性应用（AlphaGO，Watson）。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">研讨形式为<strong>择优上讲台</strong>，面对全班进行口头分享，展开讨论，控制在5人左右。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）讲解：深度学习的基本原理（1学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解深度学习的自动特征选择本质，以及AutoEncoder等经典深度学习模型。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（3）讲解：经典深度学习网络（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解卷积神经网络（CNN）、循环神经网络（RNN）等经典深度学习网络原理及代表性应用。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（3）研讨：深度学习应用（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="line-height:114%"><span style="font-size:11px">要求学生进行课后延伸自学，采用Atlas&nbsp;200DK和Mind</span></span> <span
+                    style="line-height:114%"><span style="font-size:11px">Spore开展物体识别的深度学习应用实践，选择不同网络模型或网络结构，调整不同参数，形成不同结果，形成分析报告。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">基于以上实践结果，就深度学习网络的特异性及参数调整方法进行研讨。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span style="letter-spacing:1px">研讨形式为<strong>择优上讲台</strong>，面对全班进行口头分享，展开讨论，控制在5人左右。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span style="letter-spacing:1px">第九章：强化学习（HMM）（4学时）</span></span></strong>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px"><span style="line-height:114%">本章教学目的是</span>，要求学生理解强化学习的基本原理，掌握强化学习方法的应用。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">教学内容包括马尔科夫决策过程（Markov Decision Process，MDP）和贝尔曼方程。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">本章教学安排：（讲解2学时，研讨2学时）</span></span></span></p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（1）讲解：强化学习的基本原理（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">重点讲解马尔科夫决策过程、贝尔曼方程和强化学习框架的基本思路，以及应用方式。</span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">（2）研讨：强化学习应用案例（2学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="line-height:114%"><span style="font-size:11px">要求学生进行课后延伸自学，采用Atlas&nbsp;200DK和Mind</span></span> <span
+                    style="line-height:114%"><span style="font-size:11px">Spore开展2级倒立摆的强化学习控制方法实践，选择不同的强化学习模型，调整不同参数，形成不同结果，形成分析报告。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">基于以上实践结果，就强化网络的特异性及经典应用场景（AlphaGO）进行研讨。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="line-height:114%"><span
+                    style="font-size:11px"><span
+                    style="letter-spacing:1px">研讨形式为<strong>无领导小组讨论</strong>，并选出代表对全班进行分享；展开整体讨论，进行总结。</span></span></span>
+            </p>
+            <p class="MsoNormal"><span style="letter-spacing:1px"> </span></p>
+            <p class="MsoNormal"><strong><span style="font-size:11px"><span
+                    style="letter-spacing:1px">期末研讨（4学时）</span></span></strong></p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="letter-spacing:1px"><span
+                    style="line-height:114%"><span style="font-size:11px">根据课程设计要求，学生自主分组选题，并采用Atlas&nbsp;200DK和Mind</span></span> <span
+                    style="line-height:114%"><span style="font-size:11px">Spore平台，分工协作，完成机器学习模型的设计、训练和评估，并分析不同结构、不同关键参数对学习器性能的影响，撰写研究报告和PPT。</span></span></span>
+            </p>
+            <p style="text-indent:2em;" class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">基于以上结果，就机器学习课程进行结课研讨，分享课程学习的主要收获，<span
+                    style="line-height:114%">对于华为Atlas和Mindspore等国产AI全场景计算技术的建议和反馈，探讨如何在人工智能领域实现个人价值，为国家职能产业贡献力量。</span></span></span>
+            </p>
+            <p class="MsoNormal"><span style="font-size:11px"><span
+                    style="letter-spacing:1px">研讨形式为分组<strong>上讲台</strong>，共同演讲，面对全班进行展示分享，进行讨论。</span></span>
+            </p>
+        </div>
+        <div class="left">
+            <div class="sub-menus">
+                <h2 style="background: #3362A8;color:white">课程介绍</h2>
+                <ul>
+                    <li class="" style="background: initial">
+                        <a href="/course-objective"
+                           style="color:initial">课程目标</a>
+                    </li>
+                    <li class="current" style="background: #3362A8">
+                        <a href="/teaching-programme"
+                           style="color:white">教学大纲</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

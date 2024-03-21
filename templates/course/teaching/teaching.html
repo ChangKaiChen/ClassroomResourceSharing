@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}"/>
+{% endblock styles %}
+{% block content %}
+<div class="pdf">
+    <div class="content">
+        <div class="common-container">
+            <div class="main" style="">
+                <iframe id="pdfjs" src="/static/assets/pdfweb/viewer.html?file=/static/test.pdf" class="pdfjs"></iframe>
+            </div>
+            <div class="left">
+                <div class="sub-menus">
+                    <h2 style="background: #3362A8;color:white">教学课件</h2>
+                    <ul>
+                        <li class="current" style="background: #3362A8">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-1"
+                               style="color:white">1-机器学习概论</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-2"
+                               style="color:initial">2-模型评估与选择</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-3"
+                               style="color:initial">3-线性模型</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-4" style="color:initial">4-SVM</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-5" style="color:initial">5-ANN</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-6" style="color:initial">6-CLFmore-I</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-7" style="color:initial">7-CLFmore-II</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-8"
+                               style="color:initial">8-非监督学习</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-9"
+                               style="color:initial">9-特征选择</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-10" style="color:initial">10-特征提取A-PCA</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-11" style="color:initial">11-特征提取B-KL</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-12"
+                               style="color:initial">12-特征学习</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-13"
+                               style="color:initial">13-CNN</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/14" style="color:initial">14-DeepCNN</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-15"
+                               style="color:initial">15-GAN</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-16"
+                               style="color:initial">16-RNN</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-17"
+                               style="color:initial">17-强化学习</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="https://i.study.uestc.edu.cn/06ML/menu/teaching-18" style="color:initial">18-超参数优化与自动学习</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<!--<script src="/static/assets/js/pdf.js"></script>-->
+<!--<script src="/static/assets/js/pdf.worker.js"></script>-->
+{% endblock scripts %}

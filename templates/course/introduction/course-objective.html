@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}"/>
+{% endblock styles %}
+{% block content %}
+<div class="about">
+    <div class="content">
+        <div class="common-container">
+            <div class="main" style="">
+                <p><span style="line-height:1"><span style="letter-spacing:1px">本课程依托自动化工程学院课程培养体系，建设目标为：从控制工程学科的培养目标出发，结合机器人等控制系统专业优势，对《机器学习》研究生课程教学进行改革探索，将理论学习与创新应用相结合，在原有基础上不断创新和提高教学内容、教学方法和教师队伍，提升我校人工智能应用领域研究生培养水平，力争3～5年建设成为省内乃至国内精品课程。</span></span>
+                </p>
+            </div>
+            <div class="left">
+                <div class="sub-menus">
+                    <h2 style="background: #3362A8;color:white">课程介绍</h2>
+                    <ul>
+                        <li class="current" style="background: #3362A8">
+                            <a href="/course-objective"
+                               style="color:white">课程目标</a>
+                        </li>
+                        <li class="" style="background: initial">
+                            <a href="/teaching-programme" style="color:initial">教学大纲</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
