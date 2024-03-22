@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plyr.css') }}">
+{% endblock styles %}
+{% block content %}
+<div class="pdf">
+    <div class="content">
+        <div class="common-container">
+            <div class="main" style="">
+                <video id="videoAr">
+                    <source src="/static/test.mp4">
+                </video>
+            </div>
+            <div class="left">
+                <div class="sub-menus">
+                    <h2 style="background: #3362A8;color:white">相关视频</h2>
+                    <ul>
+                        {% for video in videos %}
+                        <li class="{{ 'current' if video.id == current else '' }}"
+                            style="background: {{ '#3362A8' if video.id == current else 'initial' }}">
+                            <a href="/related-videos?video={{ video.id }}"
+                               style="color: {{ 'white' if video.id == current else 'initial'}}">{{ video.id }}-{{
+                                video.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<script src="/static/assets/js/plyr.min.js"></script>
+<script>
+     let vs = document.getElementById('videoAr');
+     const player = new Plyr(vs,{
+      i18n: {
+        speed: '速度',
+        normal: '正常',
+      }
+     });
+     window.player = player;
+</script>
+{% endblock scripts %}

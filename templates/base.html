@@ -81,7 +81,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">教学课件</a>
+                                    <a class="page-scroll dd-menu collapsed{{ ' active' if request.path == '/teaching' }}" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">教学课件</a>
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a href="/teaching?chapter=1">1-第一章</a></li>
                                         <li class="nav-item"><a href="/teaching?chapter=2">2-第二章</a></li>
@@ -89,10 +89,17 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">参考书籍</a>
+                                    <a class="page-scroll dd-menu collapsed{{ ' active' if request.path == '/books' }}" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">参考书籍</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
                                         <li class="nav-item"><a href="/books?book=1">计算机网络基础</a></li>
                                         <li class="nav-item"><a href="/books?book=1">计算机操作系统</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll dd-menu collapsed{{ ' active' if request.path == '/related-videos' }}" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">相关视频</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-5">
+                                        <li class="nav-item"><a href="/related-videos?video=1">视频1</a></li>
+                                        <li class="nav-item"><a href="/related-videos?video=1">视频2</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
