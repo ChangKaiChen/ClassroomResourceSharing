@@ -1,6 +1,6 @@
 class BaseConfig(object):
     # MySQL数据库服务器的主机名
-    HOSTNAME = "127.0.0.1"
+    HOSTNAME = "110.40.180.190"
     # MySQL数据库服务器的端口号，默认为 3306
     PORT = 3306
     # 用于连接MySQL数据库的用户名
@@ -8,7 +8,7 @@ class BaseConfig(object):
     # 用于连接MySQL数据库的密码
     PASSWORD = "root"
     # 要连接的数据库名
-    DATABASE = "ClassroomResourceSharing"
+    DATABASE = "course_web"
     # 构造MySQL数据库连接 URL
     SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}?charset=utf8"
     # 是否追踪对象的修改并发送信号
@@ -22,7 +22,7 @@ class DevelopmentConfig(BaseConfig):
     # 开发环境特有的配置项
     debug = True
     # Flask 应用的密钥，用于会话、cookie 加密等
-    secret_key = "ClassroomResourceSharing"
+    secret_key = "course_web"
     # 是否打印执行的 SQL 语句
     SQLALCHEMY_ECHO = True
     pass

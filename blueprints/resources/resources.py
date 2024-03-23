@@ -10,6 +10,8 @@ def get_resources():
         return render_template('resources/resources.html', title='资源列表')
     json = request.get_json()
     page = json['page']
+    if int(page) > 2:
+        return jsonify({'code': 200, 'msg': 'false', 'data': '无更多数据'})
     data = [{
         "id": "10001",
         "author": "cck",

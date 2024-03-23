@@ -42,7 +42,9 @@
                         <div class="message" isfirst="1">
                             {{ content|safe }}
                         </div>
+                        {% if download_url %}
                         <a href="{{ download_url }}" style="font-size: 20px;color: #0EDC8D" download>下载资源文件</a>
+                        {% endif %}
                         <div style="height: 33px; line-height: 33px; border-top: 1px solid #ddd;">
                         </div>
                     </div>
