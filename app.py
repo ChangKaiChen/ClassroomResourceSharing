@@ -15,11 +15,9 @@ async def main():
     @login_required
     async def index():
         return await render_template('index.html', title='首页')
-
     config = Config()
     config.bind = ["127.0.0.1:5000"]
     config.loglevel = "info"
-    # 应用其他的配置，例如从 DevelopmentConfig 中加载
     await serve(app, config)
     await clear_expired_verification_codes()
 

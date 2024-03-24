@@ -102,6 +102,11 @@
                             <p style="font-size: 20px; color: #FF79C6">验证码已发送</p>
                         </div>
                     </div>
+                    <div id="myModal2" class="modal">
+                        <div class="modal-content">
+                            <p style="font-size: 20px; color: #FF79C6">注册成功</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,11 +130,6 @@
         let username = document.getElementById("Username1").value;
         let email = document.getElementById("exampleInputEmail1").value;
         if (username !== "" && email !== "") {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
-            setTimeout(function () {
-                modal.style.display = "none";
-            }, 1500);
             // 禁用发送按钮并开始倒计时
             const button = document.querySelector("button.btn-primary");
             button.disabled = true;
@@ -145,6 +145,11 @@
                     button.disabled = false; // 倒计时结束后重新启用按钮
                 }
             }, 1000);
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+            setTimeout(function () {
+                modal.style.display = "none";
+            }, 1500);
             $.ajax({
                 url: '/verification_code',
                 data: JSON.stringify({username: username, email: email}),
@@ -152,6 +157,9 @@
                 contentType: 'application/json',
                 success: function (response) {
                     isCodeSent = !!response.success;
+                    if(!response.success){
+                        alert(response.msg)
+                    }
                 }
             })
         } else {
@@ -160,10 +168,36 @@
     }
 
     document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault(); // 阻止表单提交
         if (!isCodeSent) {
             alert("请发送验证码");
-            event.preventDefault(); // 阻止表单提交
+            return;
         }
+        let username = document.getElementById("Username1").value;
+            let email = document.getElementById("exampleInputEmail1").value;
+            let password = document.getElementById("exampleInputPassword1").value;
+            let code = document.getElementById("verificationCode").value;
+            $.ajax({
+                url: '/register',
+                data: JSON.stringify({username: username, email: email, password: password, code: code}),
+                type: 'POST',
+                contentType: 'application/json',
+                success: function (response) {
+                    if (response.success) {
+                        var modal2 = document.getElementById("myModal2");
+                        modal2.style.display = "block";
+                        setTimeout(function () {
+                            modal2.style.display = "none";
+                            window.location.href = "/login";
+                        }, 1500);
+                    } else {
+                        alert(response.msg)
+                    }
+                },
+                error: function () {
+                    alert("请求失败！")
+                }
+            })
     });
 
 </script>

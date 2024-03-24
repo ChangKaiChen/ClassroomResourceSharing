@@ -15,13 +15,6 @@ async def create_app():
     app.config.from_object(settings.DevelopmentConfig)
     # TODO 注册蓝本
     app.session_local = await init_db(app)
-
-    # @auth_manager.load_user
-    # async def load_user(username):
-    #     async with app.session_local() as session:
-    #         user = await session.get(AuthUser, username)
-    #         return user
-
     app.register_blueprint(user_bp)
     app.register_blueprint(resource_bp)
     app.register_blueprint(course_bp)
