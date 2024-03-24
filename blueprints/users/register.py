@@ -84,8 +84,8 @@ async def clear_expired_verification_codes():
 
 
 async def send_email(subject, message, target):
-    sender_email = "cck_stmp@cck2385966053.serv00.net"
-    password = "cck2004CCK"
+    sender_email = ""
+    password = ""
     msg = MIMEText(message)
     msg['To'] = email.utils.formataddr(('尊敬的用户', ''))
     msg['From'] = email.utils.formataddr(('CourseWeb', sender_email))
