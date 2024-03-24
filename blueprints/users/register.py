@@ -1,7 +1,6 @@
 import re
-
 from . import user_bp
-from flask import request, render_template, jsonify
+from quart import request, render_template, jsonify
 import datetime
 import random
 import asyncio
@@ -21,15 +20,16 @@ def is_valid_email(email):
 
 
 @user_bp.route('/register', methods=['POST', 'GET'])
-def register():
+async def register():
     if request.method == 'GET':
-        return render_template('users/register.html')
+        return await render_template('users/register.html')
     else:
         try:
-            username = request.form.get('username')
-            password = request.form.get('password')
-            email = request.form.get('email')
-            code = request.form.get('code')
+            form = await request.form
+            username = form.get('username')
+            password = form.get('password')
+            email = form.get('email')
+            code = form.get('code')
             if username in verification_codes:
                 if datetime.datetime.now() > verification_codes[username]['expiry']:
                     return jsonify({'success': False, 'msg': '验证码已过期!'})
@@ -43,7 +43,7 @@ def register():
 
 @user_bp.route('/verification_code', methods=['POST'])
 async def verification_code():
-    json = request.get_json()
+    json = await request.get_json()
     username = json.get('username')
     email = json.get('email')
     if not is_valid_email(email):

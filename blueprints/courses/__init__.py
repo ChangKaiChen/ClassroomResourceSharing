@@ -1,4 +1,4 @@
-from flask import Blueprint
+from quart import Blueprint
 
 course_bp = Blueprint('courses', __name__)
 

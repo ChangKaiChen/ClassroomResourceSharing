@@ -8,7 +8,7 @@ CREATE TABLE `users`(
 CREATE TABLE `published_articles`(
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `title` varchar(32) not null,
-    `content` varchar(10000) NOT NULL,
+    `content` varchar(100000) NOT NULL,
     `category` varchar(32) not null,
     `author` varchar(32) not null,
     `date` DATETIME NOT NULL
@@ -16,7 +16,7 @@ CREATE TABLE `published_articles`(
 CREATE TABLE `deleted_articles`(
     `id` INT NOT NULL PRIMARY KEY,
     `title` varchar(32) not null,
-    `content` varchar(10000) NOT NULL,
+    `content` varchar(100000) NOT NULL,
     `category` varchar(32) not null,
     `author` varchar(32) not null,
     `published_date` DATETIME NOT NULL,

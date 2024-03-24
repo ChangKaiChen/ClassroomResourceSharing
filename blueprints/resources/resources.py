@@ -1,14 +1,14 @@
 from . import resource_bp
-from flask import request, render_template, redirect, session, url_for, jsonify
-from flask_login import login_required
+from quart import request, render_template, redirect, session, url_for, jsonify
+from quart_auth import login_required
 
 
 @resource_bp.route('/resources', methods=['POST', 'GET'])
 @login_required
-def get_resources():
+async def get_resources():
     if request.method == 'GET':
-        return render_template('resources/resources.html', title='资源列表')
-    json = request.get_json()
+        return await render_template('resources/resources.html', title='资源列表')
+    json = await request.get_json()
     page = json['page']
     if int(page) > 2:
         return jsonify({'code': 200, 'msg': 'false', 'data': '无更多数据'})

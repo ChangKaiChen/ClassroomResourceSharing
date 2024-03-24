@@ -1,20 +1,17 @@
-from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, UserMixin
+from quart_auth import QuartAuth, login_user, logout_user, current_user
+from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-
-class User(UserMixin):
-    def __init__(self, username):
-        self.id = username
-
-
-login_manager = LoginManager()
-login_manager.login_view = 'users.login'  # TODO 重定向到登录页面
-
-
-@login_manager.user_loader
-def load_user(user):
-    return User(user)
+auth_manager = QuartAuth()
+# auth_manager.login_view = 'users.login'  # TODO 重定向到登录页面
 
 
 # TODO 数据库
-db = SQLAlchemy()
+Base = declarative_base()
+
+
+async def init_db(app):
+    DATABASE_URL = app.config['SQLALCHEMY_DATABASE_URI']
+    engine = create_async_engine(DATABASE_URL, echo=True)
+    SessionLocal = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)
+    return SessionLocal

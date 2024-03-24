@@ -1,13 +1,10 @@
 import datetime
 import random
 from . import user_bp
-from flask import request, render_template, redirect, session, url_for, jsonify
-from flask_login import login_user, logout_user, login_required, current_user, LoginManager, UserMixin
-from extensions import User, db
+from quart import request, render_template, redirect, session, url_for, jsonify
 import aiosmtplib
 from email.mime.text import MIMEText
 import email.utils
-import aiohttp
 import asyncio
 
 verification_codes = {}
@@ -15,8 +12,9 @@ verification_codes = {}
 
 @user_bp.route('/verification_code', methods=['POST'])
 async def verification_code():
-    username = request.form.get('username')
-    user_email = request.form.get('email')
+    form = await request.form
+    username = form.get('username')
+    user_email = form.get('email')
     code = ''.join(random.choices('0123456789', k=6))
     expiry_time = datetime.datetime.now() + datetime.timedelta(minutes=5)
     verification_codes[username] = {'code': code, 'expiry': expiry_time, 'email': user_email}

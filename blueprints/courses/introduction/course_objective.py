@@ -1,9 +1,9 @@
 from blueprints.courses import course_bp
-from flask import request, render_template, redirect, session, url_for, jsonify
-from flask_login import login_required
+from quart import request, render_template, redirect, session, url_for, jsonify
+from quart_auth import login_required
 
 
 @course_bp.route('/course-objective')
 @login_required
-def course_objective():
-    return render_template('/course/introduction/course-objective.html', title='课程目标')
+async def course_objective():
+    return await render_template('/course/introduction/course-objective.html', title='课程目标')

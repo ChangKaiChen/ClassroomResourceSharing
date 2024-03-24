@@ -1,9 +1,9 @@
 from . import resource_bp
-from flask import send_file
-from flask_login import login_required
+from quart import send_file
+from quart_auth import login_required
 
 
 @resource_bp.route('/download/<file>')
 @login_required
-def download(file):
-    return send_file(f'{file}', as_attachment=True)
+async def download(file):
+    return await send_file(f'{file}', as_attachment=True)
