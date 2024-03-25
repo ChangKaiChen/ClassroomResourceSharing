@@ -1674,7 +1674,7 @@ ol {
     height: 100%;
     color: #333;
     transition: all 0.3s ease-out 0s;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .navbar-nav .nav-item a::after {

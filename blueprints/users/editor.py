@@ -27,13 +27,16 @@ async def editor():
             existing_user = existing_user.scalar_one_or_none()
             author = existing_user.username
             new_article = PublishedArticles(title=title, content=content, category=category, author=author)
-            session.add(new_article)
-            await session.commit()
             if file:
                 filename = secure_filename(file.filename)
                 file_extension = os.path.splitext(filename)[1]
-                save_path = os.path.join('static', 'assets', 'uploads', f'{new_article.id}.{file_extension}')
-                await file.save(save_path)
+                if file_extension in ['rar', 'zip', '7z']:
+                    save_path = os.path.join('static', 'assets', 'uploads', f'{new_article.id}.{file_extension}')
+                    await file.save(save_path)
+                else:
+                    return jsonify({'success': False, 'msg': '不支持该文件类型'}), 200, {'ContentType': 'application/json'}
+            session.add(new_article)
+            await session.commit()
             return jsonify({'success': True, 'msg': '发布成功'}), 200, {'ContentType': 'application/json'}
         except Exception as e:
             print(e)

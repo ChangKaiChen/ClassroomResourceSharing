@@ -1,6 +1,6 @@
 from . import resource_bp
 from quart import request, render_template, redirect, session, url_for, jsonify
-from quart_auth import login_required
+from quart_auth import login_required, current_user
 
 
 @resource_bp.route('/resources/<id>', methods=['GET'])
@@ -42,4 +42,4 @@ async def details(id):
                 "title": "[原创]Dobby框架源码学习",
                 "classification": "Android安全"
             }]
-    return await render_template('resources/details.html', title='2024年3月7日早报', image='/static/assets/images/testimonials/testi-1.jpg', time='2024-3-7 09:00', author='cck', content=content, links=links, download_url='/download/test.rar')
+    return await render_template('resources/details.html', title='2024年3月7日早报', image='/static/assets/images/testimonials/testi-1.jpg', time='2024-3-7 09:00', author='cck', content=content, links=links, download_url='/download/test.rar', username=current_user.auth_id)

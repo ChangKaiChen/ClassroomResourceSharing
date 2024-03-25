@@ -13,6 +13,8 @@ class BaseConfig(object):
     SQLALCHEMY_DATABASE_URI = f"mysql+asyncmy://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}?charset=utf8"
     # 是否追踪对象的修改并发送信号
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    # 回收链接
+    SQLALCHEMY_POOL_RECYCLE = 1800
     # 是否启用调试模式
     debug = True
     # 其他通用配置项

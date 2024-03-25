@@ -38,7 +38,7 @@
                 type: 'POST',
                 contentType: 'application/json',
                 success: function (response) {
-                    if (response.msg === 'success') {
+                    if (response.success) {
                         response.data.forEach(function (data) {
                             $('#data-list > tbody').append(
                                 `<tr class="thread " data-tid="${data.id}">
@@ -49,13 +49,13 @@
                             </a>
                             <a href="/resources/${data.id}"  target="_blank" title="新窗口打开">${data.title}</a>
                             <a href="/resources/${data.id}"  target="_blank" title="新窗口打开" class="small hidden-sm hidden-md float-right"
-                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">${data.classification}</a>
+                               style="border: 1px solid #e2e2e2; color: #9B9B9B; border-radius: 20px; padding: 1px 12px; margin-left: 4px;">${data.category}</a>
                         </div>
                         <div class="row small mx-0 mb-2">
                             <div class="col px-0">
                                 <a href="/users/home/${data.author}" style="color: #999999;"
                                    class="username hidden-sm hidden-md">${data.author}</a>
-                                <span class="date hidden-sm hidden-md" style="color: #999999;">・${data.time}</span>
+                                <span class="date hidden-sm hidden-md" style="color: #999999;">・${data.date}</span>
                             </div>
                         </div>
                     </td>

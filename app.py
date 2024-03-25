@@ -2,7 +2,7 @@ import asyncio
 from hypercorn import Config
 from quart import render_template
 from factory import create_app
-from quart_auth import login_required
+from quart_auth import login_required, current_user
 from blueprints.users.register import clear_expired_verification_codes
 from hypercorn.asyncio import serve
 
@@ -14,7 +14,7 @@ async def main():
     @app.route('/index')
     @login_required
     async def index():
-        return await render_template('index.html', title='首页')
+        return await render_template('index.html', title='首页', username=current_user.auth_id)
     config = Config()
     config.bind = ["127.0.0.1:5000"]
     config.loglevel = "info"

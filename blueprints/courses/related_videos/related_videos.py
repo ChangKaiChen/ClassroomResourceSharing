@@ -1,6 +1,6 @@
 from blueprints.courses import course_bp
 from quart import request, render_template, redirect, session, url_for, jsonify
-from quart_auth import login_required
+from quart_auth import login_required, current_user
 
 
 @course_bp.route('/related-videos')
@@ -11,4 +11,4 @@ async def related_videos():
         {'id': 2, 'title': '视频2'},
     ]
     video = request.args.get('video', default=1, type=int)
-    return await render_template('/course/related_videos/related_videos.html', title=f'{videos[video - 1]["title"]}', video_path='/static/test.mp4', videos=videos, current=video)
+    return await render_template('/course/related_videos/related_videos.html', title=f'{videos[video - 1]["title"]}', video_path='/static/test.mp4', videos=videos, current=video, username=current_user.auth_id)
