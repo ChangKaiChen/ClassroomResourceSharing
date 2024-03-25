@@ -92,8 +92,35 @@
     })
 
     function finishEditing() {
-        console.log(editor.getHtml())
-        alert('完成编辑')
+        let title = document.getElementById("article-title").value;
+        let category = document.getElementById("article-type").value;
+        let html = editor.getHtml();
+        let file = document.getElementById("file-upload").files[0];
+        let formData = new FormData();
+        formData.append("title", title);
+        formData.append("html", html);
+        formData.append("category", category);
+        formData.append("file", file);
+        if (title !== '' && category !== '' && html !== '') {
+            $.ajax({
+                url: '/editor',
+                data: formData,
+                contentType: false, // 必须为 false，以避免 jQuery 设置错误的内容类型
+                processData: false, // 必须为 false，以防止 jQuery 将 FormData 转换为字符串
+                type: 'POST',
+                success: function (response) {
+                    alert(response.msg)
+                    if (response.success) {
+                        window.location.href = "/resources";
+                    }
+                },
+                error: function () {
+                    alert("请求失败！")
+                }
+            })
+        } else {
+            alert("请填写完整内容！")
+        }
     }
 </script>
 {% endblock scripts %}

@@ -12,9 +12,9 @@ async def login():
     else:
         async with current_app.session_local() as session:
             try:
-                form = await request.form
-                username_or_email = form.get('username_or_email')
-                password = form.get('password')
+                json = await request.get_json()
+                username_or_email = json.get('username_or_email')
+                password = json.get('password')
                 existing_user = await session.execute(
                     select(Users).where(or_(Users.username == username_or_email, Users.email == username_or_email))
                 )

@@ -86,6 +86,30 @@
 <script src="/static/assets/js/tiny-slider.js"></script>
 <script src="/static/assets/js/glightbox.min.js"></script>
 <script src="/static/assets/js/main.js"></script>
+<script src="/static/assets/js/jquery.min.js"></script>
+<script>
+    document.querySelector("form").addEventListener("submit", function (event){
+        event.preventDefault();
+        let username_or_email = document.getElementById("exampleInputEmail1").value;
+        let password = document.getElementById("exampleInputPassword1").value;
+        $.ajax({
+                url: '/login',
+                data: JSON.stringify({username_or_email: username_or_email, password: password}),
+                type: 'POST',
+                contentType: 'application/json',
+                success: function (response) {
+                    if (response.success === false) {
+                        alert(response.msg)
+                    }else{
+                        window.location.href = "/index";
+                    }
+                },
+                error: function () {
+                    alert("请求失败！")
+                }
+            })
+    })
+</script>
 </body>
 
 </html>
