@@ -42,6 +42,6 @@ async def details(id):
         file_extension = await file_exists_in_static(id)
         download_url = f'/download/static/download/{id}{file_extension}' if file_extension else None
     return await render_template('resources/details.html', title=title,
-                                 image='/static/assets/images/testimonials/testi-1.jpg', time=time, author=author,
+                                 image='/static/assets/images/avatar.jpg', time=time, author=author,
                                  content=content, links=links, download_url=download_url,
                                  username=current_user.auth_id)
