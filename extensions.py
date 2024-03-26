@@ -12,6 +12,9 @@ Base = declarative_base()
 
 async def init_db(app):
     DATABASE_URL = app.config['SQLALCHEMY_DATABASE_URI']
-    engine = create_async_engine(DATABASE_URL, echo=True)
+    engine = create_async_engine(DATABASE_URL, echo=True, connect_args={
+        "connect_timeout": 10,
+        "read_timeout": 20
+    })
     SessionLocal = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)
     return SessionLocal
